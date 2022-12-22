@@ -28,12 +28,12 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 declare_args() {
-  enable_ohos_kernel_liteos_m_cppsupport = true
+  enable_ohos_kernel_liteos_m_cppsupport = false
   enable_ohos_kernel_liteos_m_cpup = true
-  enable_ohos_kernel_liteos_m_exchook = true
-  enable_ohos_kernel_liteos_m_kal = true
-  enable_ohos_kernel_liteos_m_fs = true
-  enable_ohos_kernel_liteos_m_shell = true
+  enable_ohos_kernel_liteos_m_exchook = false
+  enable_ohos_kernel_liteos_m_kal = false
+  enable_ohos_kernel_liteos_m_fs = false
+  enable_ohos_kernel_liteos_m_shell = false
   enable_ohos_kernel_liteos_m_backtrace = true
   enable_ohos_kernel_liteos_m_test = false
   enable_ohos_kernel_liteos_m_pm = true
@@ -41,7 +41,6 @@ declare_args() {
   enable_ohos_kernel_liteos_m_lwip = false
   enable_ohos_kernel_liteos_m_dynlink = false
   enable_ohos_kernel_liteos_m_tz = false
-  ohos_kernel_liteos_m_lwip_path = "components/net/lwip-2.1:lwip"
 }
 
 LITEOSTOPDIR = "//kernel/liteos_m"

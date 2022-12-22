@@ -39,7 +39,7 @@
 
 /* The magic length is 32 bits, the lower 8 bits are used to save the owner task ID,
    and the other 24 bits are used to set the magic number for verification. */
-#define OS_MEMBOX_MAGIC         0xa55a5a00
+#define OS_MEMBOX_MAGIC         0xa55a5a00UL
 #define OS_MEMBOX_TASKID_BITS   8
 #define OS_MEMBOX_MAX_TASKID    ((1 << OS_MEMBOX_TASKID_BITS) - 1)
 #define OS_MEMBOX_TASKID_GET(addr) (((UINTPTR)(addr)) & OS_MEMBOX_MAX_TASKID)

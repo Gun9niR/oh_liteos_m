@@ -413,7 +413,7 @@ LITE_OS_SEC_TEXT_INIT UINT32 LOS_SwtmrCreate(UINT32 interval,
                                              UINT8 mode,
                                              SWTMR_PROC_FUNC handler,
                                              UINT32 *swtmrId,
-                                             UINT32 arg,
+                                             UINT64 arg,
                                              UINT8 rouses,
                                              UINT8 sensitive)
 #else
@@ -421,7 +421,7 @@ LITE_OS_SEC_TEXT_INIT UINT32 LOS_SwtmrCreate(UINT32 interval,
                                              UINT8 mode,
                                              SWTMR_PROC_FUNC handler,
                                              UINT32 *swtmrId,
-                                             UINT32 arg)
+                                             UINT64 arg)
 #endif
 {
     SWTMR_CTRL_S  *swtmr = NULL;

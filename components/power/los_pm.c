@@ -697,7 +697,7 @@ VOID OsPmUnfreezeTaskUnsafe(UINT32 taskID)
     return;
 }
 
-STATIC VOID OsPmSwtmrHandler(UINT32 arg)
+STATIC VOID OsPmSwtmrHandler(UINT64 arg)
 {
     const CHAR *name = (const CHAR *)arg;
     UINT32 ret = LOS_PmLockRelease(name);
@@ -718,10 +718,10 @@ UINT32 LOS_PmTimeLockRequest(const CHAR *name, UINT64 millisecond)
 
     ticks = (UINT32)((millisecond + OS_MS_PER_TICK - 1) / OS_MS_PER_TICK);
 #if (LOSCFG_BASE_CORE_SWTMR_ALIGN == 1)
-    ret = LOS_SwtmrCreate(ticks, LOS_SWTMR_MODE_ONCE, OsPmSwtmrHandler, &swtmrID, (UINT32)(UINTPTR)name,
+    ret = LOS_SwtmrCreate(ticks, LOS_SWTMR_MODE_ONCE, OsPmSwtmrHandler, &swtmrID, (UINT64)(UINTPTR)name,
                           OS_SWTMR_ROUSES_ALLOW, OS_SWTMR_ALIGN_INSENSITIVE);
 #else
-    ret = LOS_SwtmrCreate(ticks, LOS_SWTMR_MODE_ONCE, OsPmSwtmrHandler, &swtmrID, (UINT32)(UINTPTR)name);
+    ret = LOS_SwtmrCreate(ticks, LOS_SWTMR_MODE_ONCE, OsPmSwtmrHandler, &swtmrID, (UINT64)(UINTPTR)name);
 #endif
     if (ret != LOS_OK) {
         return ret;
