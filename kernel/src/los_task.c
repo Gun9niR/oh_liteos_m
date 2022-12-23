@@ -143,7 +143,7 @@ STATIC VOID OsRecycleTaskResources(LosTaskCB *taskCB, UINTPTR *stackPtr)
 #else
         *stackPtr = taskCB->topOfStack;
 #endif
-        taskCB->topOfStack = (UINT32)NULL;
+        taskCB->topOfStack = (UINT64)NULL;
     }
 }
 

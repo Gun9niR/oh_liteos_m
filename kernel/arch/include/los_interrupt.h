@@ -54,7 +54,7 @@ typedef UINT16 HWI_PRIOR_T;
 
 typedef UINT16 HWI_MODE_T;
 
-typedef UINT32 HWI_ARG_T;
+typedef UINT64 HWI_ARG_T;
 
 #if (OS_HWI_WITH_ARG == 1)
 typedef VOID (*HWI_PROC_FUNC)(VOID *parm);

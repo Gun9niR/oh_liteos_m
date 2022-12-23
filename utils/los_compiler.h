@@ -318,8 +318,8 @@ typedef char                   CHAR;
 typedef unsigned int           BOOL;
 typedef unsigned long long     UINT64;
 typedef signed long long       INT64;
-typedef unsigned int           UINTPTR;
-typedef signed int             INTPTR;
+typedef unsigned long long     UINTPTR;
+typedef signed long long       INTPTR;
 
 #define VOID          void
 

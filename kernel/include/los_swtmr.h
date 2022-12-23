@@ -261,7 +261,7 @@ enum EnSwTmrType {
 * <ul><li>los_swtmr.h: the header file that contains the API declaration.</li></ul>
 * @see None.
 */
-typedef VOID (*SWTMR_PROC_FUNC)(UINT32 para);
+typedef VOID (*SWTMR_PROC_FUNC)(UINT64 para);
 
 /**
  * @ingroup los_swtmr
@@ -396,7 +396,7 @@ extern UINT32 LOS_SwtmrCreate(UINT32 interval,
                               UINT8 mode,
                               SWTMR_PROC_FUNC handler,
                               UINT32 *swtmrID,
-                              UINT32 arg,
+                              UINT64 arg,
                               UINT8 rouses,
                               UINT8 sensitive);
 #else
@@ -404,7 +404,7 @@ extern UINT32 LOS_SwtmrCreate(UINT32 interval,
                               UINT8 mode,
                               SWTMR_PROC_FUNC handler,
                               UINT32 *swtmrID,
-                              UINT32 arg);
+                              UINT64 arg);
 #endif
 
 /**
