@@ -68,7 +68,7 @@ static_library("kernel") {
       deps = [ "arch/arm/cortex-m33/gcc/NTZ:arch" ]
     }
   } else if ("$board_cpu" == "") {
-    if ("$board_arch" == "rv32imac" || "$board_arch" == "rv32imafdc") {
+    if ("$board_arch" == "rv32imac" || "$board_arch" == "rv32imafdc" || "$board_arch" == "rv64imac" ) {
       deps = [ "arch/risc-v/riscv32/gcc:arch" ]
     }
   }
